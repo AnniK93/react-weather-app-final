@@ -1,5 +1,6 @@
 import React from "react";
 import "./Results.css";
+import Time from "./Time";
 
 export default function Results(props) {
   console.log(props);
@@ -16,7 +17,7 @@ export default function Results(props) {
         </div>
         <div className="row">
           <div className="col-6">
-            <h3>Day, time</h3>
+            <Time />
             <h3>{props.weather.description}</h3>
             <h2 className="Weather-summary">
               <img src={props.weather.icon} alt={props.weather.description} />
