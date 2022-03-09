@@ -18,12 +18,12 @@ export default function Results(props) {
         <div className="row">
           <div className="col-6">
             <Time />
-            <h3>{props.weather.description}</h3>
-            <h2 className="Weather-summary">
+            <h3 className="description">{props.weather.description}</h3>
+            <h3 className="Weather-summary">
               <img src={props.weather.icon} alt={props.weather.description} />
               <span>{Math.round(props.weather.temperature)}</span>
               <span className="unit">°C</span>
-            </h2>
+            </h3>
           </div>
           <div className="col-6">
             <h3>Humidity: {props.weather.humidity}%</h3>

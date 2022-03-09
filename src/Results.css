@@ -1,3 +1,15 @@
 .Results {
   text-align: left;
 }
+
+.Results h2 {
+  margin: 50px 0px 20px;
+}
+
+.Results h4 {
+  margin-bottom: 5px;
+}
+
+.Results .description:first-letter {
+  text-transform: capitalize;
+}

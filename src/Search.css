@@ -1,0 +1,8 @@
+.Search form {
+  display: block;
+}
+
+.Search input,
+button {
+  margin: 2px;
+}

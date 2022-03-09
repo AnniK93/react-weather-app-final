@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import "./Search.css";
 
 export default function Search() {
   let [location, setLocation] = useState();
