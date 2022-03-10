@@ -3,7 +3,7 @@ import "./Results.css";
 import Time from "./Time";
 
 export default function Results(props) {
-  console.log(props);
+  // console.log(props);
   if (props.weather.location) {
     return (
       <div className="Results">
