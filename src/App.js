@@ -6,9 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <header>
-          <h2>City names will go here</h2>
-        </header>
+        <header></header>
         <main>
           <Search />
         </main>

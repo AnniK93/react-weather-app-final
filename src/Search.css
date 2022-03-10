@@ -1,5 +1,9 @@
+.city-names {
+  margin: 20px 0px;
+}
 .Search form {
   display: block;
+  font-size: 18px;
 }
 
 .Search input,
