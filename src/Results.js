@@ -22,15 +22,8 @@ export default function Results(props) {
             <h3 className="description">{props.weather.description}</h3>
             <h3 className="Weather-summary">
               <div className="float-left">
-                <WeatherIcon
-                  code={props.weather.icon}
-                  alt={props.weather.description}
-                />
+                <WeatherIcon code={props.weather.icon} />
               </div>
-              <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt={props.weather.description}
-              />
               <span>{Math.round(props.weather.temperature)}</span>
               <span className="unit">°C</span>
             </h3>
