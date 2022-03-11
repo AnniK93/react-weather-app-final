@@ -1,6 +1,7 @@
 import React from "react";
 import "./Results.css";
 import Time from "./Time";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Results(props) {
   // console.log(props);
@@ -20,7 +21,16 @@ export default function Results(props) {
             <Time />
             <h3 className="description">{props.weather.description}</h3>
             <h3 className="Weather-summary">
-              <img src={props.weather.icon} alt={props.weather.description} />
+              <div className="float-left">
+                <WeatherIcon
+                  code={props.weather.icon}
+                  alt={props.weather.description}
+                />
+              </div>
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt={props.weather.description}
+              />
               <span>{Math.round(props.weather.temperature)}</span>
               <span className="unit">°C</span>
             </h3>
