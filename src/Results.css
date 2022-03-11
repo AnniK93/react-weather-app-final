@@ -6,10 +6,18 @@
   margin: 50px 0px 25px;
 }
 
-.Results h4 {
-  margin-bottom: 5px;
-}
-
 .Results .description:first-letter {
   text-transform: capitalize;
+}
+
+.Results .temperature {
+  font-size: 50px;
+}
+.Results .unit {
+  position: relative;
+  top: -16px;
+}
+
+.Results .Weather-summary {
+  margin-top: 15px;
 }

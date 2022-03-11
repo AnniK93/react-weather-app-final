@@ -13,24 +13,26 @@ export default function Results(props) {
             <h2>
               {props.weather.location}, {props.weather.country}
             </h2>
-            <h4>Last update:</h4>
+            <h5>Last update:</h5>
           </div>
         </div>
         <div className="row">
           <div className="col-6">
             <Time />
-            <h3 className="description">{props.weather.description}</h3>
-            <h3 className="Weather-summary">
+            <h4 className="description">{props.weather.description}</h4>
+            <h4 className="Weather-summary">
               <div className="float-left">
                 <WeatherIcon code={props.weather.icon} />
               </div>
-              <span>{Math.round(props.weather.temperature)}</span>
+              <span className="temperature">
+                {Math.round(props.weather.temperature)}
+              </span>
               <span className="unit">°C</span>
-            </h3>
+            </h4>
           </div>
           <div className="col-6">
-            <h3>Humidity: {props.weather.humidity}%</h3>
-            <h3>Wind: {props.weather.wind}m/sec</h3>
+            <h4>Humidity: {props.weather.humidity}%</h4>
+            <h4>Wind: {props.weather.wind}m/sec</h4>
           </div>
         </div>
       </div>

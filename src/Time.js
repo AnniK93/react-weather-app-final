@@ -28,9 +28,9 @@ export default function Time() {
 
   return (
     <div className="Time">
-      <h3>
+      <h4>
         {currentDay} {currentTime}
-      </h3>
+      </h4>
     </div>
   );
 }
