@@ -4,7 +4,6 @@ import Time from "./Time";
 import WeatherIcon from "./WeatherIcon";
 
 export default function Results(props) {
-  // console.log(props);
   if (props.weather.location) {
     return (
       <div className="Results">

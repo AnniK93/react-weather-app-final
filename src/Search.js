@@ -11,8 +11,6 @@ export default function Search() {
   let units = "metric";
 
   function showWeather(response) {
-    // console.log(response);
-
     setWeather({
       ready: true,
       location: response.data.name,
