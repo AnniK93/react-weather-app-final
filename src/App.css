@@ -3,7 +3,7 @@ body {
   background-image: url("./few_clouds.jpg");
   background-attachment: fixed;
   background-size: cover;
-  padding: 50px;
+  padding: 30px;
 }
 
 .container {

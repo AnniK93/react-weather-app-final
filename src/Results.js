@@ -22,7 +22,7 @@ export default function Results(props) {
             <h4 className="description">{props.weather.description}</h4>
             <h4 className="Weather-summary">
               <div className="float-left">
-                <WeatherIcon code={props.weather.icon} />
+                <WeatherIcon code={props.weather.icon} size={64} />
               </div>
               <span className="temperature">
                 {Math.round(props.weather.temperature)}

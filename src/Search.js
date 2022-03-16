@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import WeatherForecast from "./WeatherForecast";
 import "./Search.css";
 
 export default function Search() {
   let [location, setLocation] = useState();
-  let [weather, setWeather] = useState({});
+  let [weather, setWeather] = useState({ ready: false });
   let apiKey = "6697611895f9d8bb5ac23403332f6cdd";
   let units = "metric";
 
   function showWeather(response) {
-    //console.log(response);
+    // console.log(response);
 
     setWeather({
+      ready: true,
       location: response.data.name,
       country: response.data.sys.country,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -60,7 +63,6 @@ export default function Search() {
       "Pune",
       "Berlin",
       "Paris",
-      "Rome",
       "Bangkok",
       "Antananarivo",
       "Cairo",
@@ -160,37 +162,73 @@ export default function Search() {
     axios.get(url).then(showWeather);
   }
 
-  return (
-    <div className="Search">
-      <div className="row city-names">
-        <div className="col-3">
-          <h4>Moscow</h4>
+  if (weather.ready) {
+    return (
+      <div className="Search">
+        <div className="row city-names">
+          <div className="col-3">
+            <h4>Moscow</h4>
+          </div>
+          <div className="col-3">
+            <h4>Berlin</h4>
+          </div>
+          <div className="col-3">
+            <h4>London</h4>
+          </div>
+          <div className="col-3">
+            <h4>New York</h4>
+          </div>
         </div>
-        <div className="col-3">
-          <h4>Berlin</h4>
-        </div>
-        <div className="col-3">
-          <h4>London</h4>
-        </div>
-        <div className="col-3">
-          <h4>New York</h4>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            onChange={updateLocation}
+          />
+          <button type="Submit">Search</button>
+          <button type="Submit" onClick={searchCurrentLocation}>
+            📍 Current location
+          </button>
+          <button type="Submit" onClick={searchRandomLocation}>
+            🗺 Random location
+          </button>
+        </form>
+        <Results weather={weather} />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Enter a city..."
-          onChange={updateLocation}
-        />
-        <button type="Submit">Search</button>
-        <button type="Submit" onClick={searchCurrentLocation}>
-          📍 Current location
-        </button>
-        <button type="Submit" onClick={searchRandomLocation}>
-          🗺 Random location
-        </button>
-      </form>
-      <Results weather={weather} />
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="Search">
+        <div className="row city-names">
+          <div className="col-3">
+            <h4>Moscow</h4>
+          </div>
+          <div className="col-3">
+            <h4>Berlin</h4>
+          </div>
+          <div className="col-3">
+            <h4>London</h4>
+          </div>
+          <div className="col-3">
+            <h4>New York</h4>
+          </div>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            onChange={updateLocation}
+          />
+          <button type="Submit">Search</button>
+          <button type="Submit" onClick={searchCurrentLocation}>
+            📍 Current location
+          </button>
+          <button type="Submit" onClick={searchRandomLocation}>
+            🗺 Random location
+          </button>
+        </form>
+      </div>
+    );
+  }
 }
