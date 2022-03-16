@@ -1,4 +1,3 @@
-import { cleanup } from "@testing-library/react";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
