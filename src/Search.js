@@ -163,20 +163,6 @@ export default function Search() {
   if (weather.ready) {
     return (
       <div className="Search">
-        <div className="row city-names">
-          <div className="col-3">
-            <h4>Moscow</h4>
-          </div>
-          <div className="col-3">
-            <h4>Berlin</h4>
-          </div>
-          <div className="col-3">
-            <h4>London</h4>
-          </div>
-          <div className="col-3">
-            <h4>New York</h4>
-          </div>
-        </div>
         <form onSubmit={handleSubmit}>
           <input
             type="search"
@@ -198,20 +184,6 @@ export default function Search() {
   } else {
     return (
       <div className="Search">
-        <div className="row city-names">
-          <div className="col-3">
-            <h4>Moscow</h4>
-          </div>
-          <div className="col-3">
-            <h4>Berlin</h4>
-          </div>
-          <div className="col-3">
-            <h4>London</h4>
-          </div>
-          <div className="col-3">
-            <h4>New York</h4>
-          </div>
-        </div>
         <form onSubmit={handleSubmit}>
           <input
             type="search"
