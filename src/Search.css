@@ -10,12 +10,17 @@ button {
 }
 .Search button {
   background-color: #dee2e5;
+  color: black;
+  padding: 5px;
+}
+.Search input {
+  padding: 5px;
 }
 @media (max-width: 410px) {
   .Search input {
     max-width: 150px;
   }
   .Search form {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
