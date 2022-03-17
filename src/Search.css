@@ -8,9 +8,14 @@
 button {
   margin: 10px 2px;
 }
-
+.Search button {
+  background-color: #dee2e5;
+}
 @media (max-width: 410px) {
   .Search input {
     max-width: 150px;
+  }
+  .Search form {
+    font-size: 12px;
   }
 }
