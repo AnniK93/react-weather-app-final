@@ -19,6 +19,14 @@ export default function Results(props) {
           <div className="col-6">
             <Time />
             <h4 className="description">{props.weather.description}</h4>
+          </div>
+          <div className="col-6">
+            <h4>Humidity: {props.weather.humidity}%</h4>
+            <h4>Wind: {props.weather.wind}m/sec</h4>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
             <h4 className="Weather-summary">
               <div className="float-left">
                 <WeatherIcon code={props.weather.icon} size={64} />
@@ -28,10 +36,6 @@ export default function Results(props) {
               </span>
               <span className="unit">°C</span>
             </h4>
-          </div>
-          <div className="col-6">
-            <h4>Humidity: {props.weather.humidity}%</h4>
-            <h4>Wind: {props.weather.wind}m/sec</h4>
           </div>
         </div>
       </div>
