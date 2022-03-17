@@ -8,7 +8,7 @@ export default function Results(props) {
     return (
       <div className="Results">
         <div className="row">
-          <div className="col-6">
+          <div className="col-12">
             <h2>
               {props.weather.location}, {props.weather.country}
             </h2>

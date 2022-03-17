@@ -21,3 +21,9 @@
 .Results .Weather-summary {
   margin-top: 15px;
 }
+
+@media (max-width: 600px) {
+  .Results .temperature {
+    font-size: 36px;
+  }
+}
