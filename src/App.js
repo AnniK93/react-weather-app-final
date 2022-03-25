@@ -12,7 +12,11 @@ export default function App() {
             <Search />
           </main>
           <footer>
-            <a href="https://github.com/AnniK93/react-weather-app-final">
+            <a
+              href="https://github.com/AnniK93/react-weather-app-final"
+              target="_blank"
+              rel="noreferrer"
+            >
               Open source code
             </a>{" "}
             by Anni
